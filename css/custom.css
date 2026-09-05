@@ -1,0 +1,77 @@
+.portrait-photo {
+    border-color: var(--border-soft);
+    background-color: var(--surface);
+}
+
+.portrait-photo::before {
+    content: none;
+}
+
+.portrait-photo img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.stat-card.link-modal {
+    cursor: pointer;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+/* Modo claro */
+.stat-card.link-modal:hover {
+    background-color: var(--violet-100);
+    border-color: var(--violet-600);
+}
+
+/* Modo escuro */
+[data-bs-theme="dark"] .stat-card.link-modal:hover {
+    background-color: var(--violet-800);
+    border-color: var(--violet-600);
+}
+
+[data-bs-theme="dark"] .stat-card.link-modal:hover .card-icon {
+    color: var(--violet-100);
+}
+
+/* Cursos: cores e cartões do style-exemplo.css, limitados a esta seção. */
+#cursos {
+  --violet-950: #241135; --violet-800: #51256f; --violet-600: #884cb0;
+  --violet-50: #f8f4fa; --muted: #6f6875; --surface: #fff;
+  --line: rgba(53, 22, 78, 0.12); --shadow: 0 24px 70px rgba(49, 20, 69, 0.12);
+  background: var(--violet-50);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+[data-bs-theme="dark"] #cursos {
+  --violet-950: #f7eefc; --violet-800: #d7bbe7; --violet-600: #ae6ed1;
+  --violet-50: #24192b; --muted: #c4b8ca; --surface: #211829;
+  --line: rgba(235, 217, 245, 0.13); --shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
+}
+#cursos .course-card { position: relative; display: flex; flex-direction: column; padding: 2rem; border-radius: 22px; border: 1px solid var(--line); background: var(--surface); box-shadow: 0 12px 38px rgba(51,22,68,0.055); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+#cursos .course-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+#cursos .course-card.featured { background: #35164e; color: #fff; border-color: transparent; }
+#cursos .course-number { color: var(--violet-600); font: italic 1rem Georgia, serif; }
+#cursos .course-badge { position: absolute; top: 1.5rem; right: 1.5rem; background: #fff; color: #5a2878; border-radius: 999px; padding: 0.35rem 0.7rem; font-size: 0.7rem; font-weight: 800; }
+#cursos .course-card h3 { font: 700 1.65rem / 1.2 Georgia, serif; color: var(--violet-950); margin: 2rem 0 1rem; }
+#cursos .course-card.featured h3, #cursos .course-card.featured .course-link { color: #fff; }
+#cursos .course-card p { color: var(--muted); line-height: 1.7; }
+#cursos .course-card.featured p, #cursos .course-card.featured li { color: rgba(255,255,255,0.72); }
+#cursos .course-card ul { color: var(--muted); font-size: 0.9rem; margin: 1rem 0 2rem; }
+#cursos .course-card li { display: flex; align-items: center; gap: 0.55rem; }
+#cursos .course-check { color: var(--violet-600); flex: 0 0 auto; }
+#cursos .course-card.featured .course-check { color: #d8b6e8; }
+#cursos .course-link { display: flex; align-items: center; gap: 0.5rem; color: var(--violet-800); font-weight: 800; font-size: 0.9rem; text-decoration: none; }
+#cursos .course-link:hover { gap: 0.75rem; }
+#cursos .course-card p { flex-grow: 0; font-size: 1rem; }
+#cursos .course-card:hover { border-color: var(--line); }
+#cursos .course-card.featured:hover { border-color: transparent; }
+#cursos .course-card .course-link { display: flex; color: var(--violet-800); }
+#cursos .course-card.featured .course-link { color: #fff; }
+#cursos .template-note { text-align: left; font-size: 0.78rem; }
+@media (max-width: 575.98px) {
+  #cursos .course-card { padding: 1.55rem; }
+}
