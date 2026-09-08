@@ -10,8 +10,12 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:image" content="assets/images/og-optimized.png">
   <title>Violêta Nolêto | Serviço Social para Concursos</title>
-  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/images/logomarca-vertical.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/images/logomarca-vertical.png">
   <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/custom.css">
 </head>
@@ -21,8 +25,8 @@
   <nav class="navbar navbar-expand-lg fixed-top portfolio-navbar" aria-label="Navegação principal">
     <div class="container">
       <a class="navbar-brand brand-lockup" href="#inicio">
-        <span class="brand-mark" aria-hidden="true">VN</span>
-        <span><strong>Violêta Nolêto</strong><small>Professora de Serviço Social</small></span>
+        <img class="brand-logo" src="assets/images/logomarca-vertical.png" alt="" width="4726" height="4726">
+        <span><strong>Violêta Nolêto</strong><small>De frente com o social</small></span>
       </a>
 
       <div class="d-flex align-items-center gap-2 order-lg-3">
@@ -97,7 +101,6 @@
           <p>Formatos pensados para diferentes momentos da sua jornada até a aprovação.</p>
         </div>
         <div class="row g-4 mt-2" id="courses-list"></div>
-        <p class="template-note"><strong>Template:</strong> substitua os links de exemplo pelas plataformas reais dos cursos no arquivo <code>js/script.js</code>.</p>
       </div>
     </section>
 
@@ -113,6 +116,7 @@
             <div class="testimonial-card" aria-live="polite">
               <div class="quote-icon" aria-hidden="true">“</div>
               <blockquote id="testimonial-text"></blockquote>
+              <button type="button" id="testimonial-toggle" aria-expanded="false" aria-controls="testimonial-text" hidden>Leia mais</button>
               <div class="testimonial-author">
                 <div class="avatar" id="testimonial-avatar"></div>
                 <div><strong id="testimonial-name"></strong><span id="testimonial-result"></span></div>
@@ -134,12 +138,11 @@
           <div class="row g-5 align-items-center">
             <div class="col-lg-5">
               <span class="eyebrow"><span aria-hidden="true">◉</span> Vamos conversar?</span>
-              <h2 class="section-title">Informação, parcerias e novos projetos.</h2>
+              <h2 class="section-title">Informação, parcerias e dúvidas.</h2>
               <p>Escolha o canal mais adequado para falar sobre cursos, mentorias, convites para aulas ou parcerias com instituições de ensino.</p>
             </div>
             <div class="col-lg-7">
               <div class="row g-3" id="contact-list"></div>
-              <p class="template-note text-start mb-0"><strong>Template:</strong> atualize telefone, perfis e e-mail no arquivo <code>js/script.js</code> antes da publicação final.</p>
             </div>
           </div>
         </div>
@@ -149,12 +152,13 @@
 
   <footer>
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-      <div class="brand-lockup footer-brand"><span class="brand-mark" aria-hidden="true">VN</span><span><strong>Violêta Nolêto</strong><small>Professora de Serviço Social</small></span></div>
+      <div class="brand-lockup footer-brand"><img class="brand-logo" src="assets/images/logomarca-vertical.png" alt="" width="4726" height="4726" loading="lazy"><span><strong>Violêta Nolêto</strong><small>De frente com o social</small></span></div>
       <p>© <span id="current-year"></span> Violêta Nolêto. Todos os direitos reservados.</p>
+      <p>Desenvolvido por <a href="https://www.linkedin.com/in/felipe-akel-carvalho-florentino-009412135/" class="strong no-sublinhado" target="_blank" rel="noreferrer" aria-label="Visitar LinkedIn do desenvolvedor">Felipe Akel</a>.</p>
     </div>
   </footer>
 
-  <a class="floating-whatsapp" id="floating-whatsapp" href="#" target="_blank" rel="noreferrer" aria-label="Falar pelo WhatsApp">W</a>
+  <a class="floating-whatsapp" id="floating-whatsapp" href="https://wa.me/556199602626?text=Ol%C3%A1%2C%20professora%20Viol%C3%AAta%21%20Gostaria%20de%20entrar%20em%20contato." target="_blank" rel="noreferrer" aria-label="Falar pelo WhatsApp"><img src="assets/images/whatsapp.png" alt="" width="54" height="54"></a>
 
   <!-- Modals -->
   <div class="modal fade" id="modalConteudo" tabindex="-1" aria-labelledby="modalConteudoLabel" aria-hidden="true">
