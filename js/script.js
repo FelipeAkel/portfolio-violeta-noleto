@@ -258,8 +258,7 @@ function applyTheme(theme) {
 
 function initializeTheme() {
   const saved = localStorage.getItem("violeta-theme");
-  const preferred = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  applyTheme(saved || preferred);
+  applyTheme(saved === "dark" ? "dark" : "light");
   $("#theme-button").addEventListener("click", () => {
     const next = document.documentElement.getAttribute("data-bs-theme") === "dark" ? "light" : "dark";
     localStorage.setItem("violeta-theme", next);
